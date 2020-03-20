@@ -1,0 +1,7 @@
+﻿  source.c
+C:\Users\wybieracz\source\repos\pk2\lab-01\lab_1_zad_2-3\lab_1_zad_2-3\source.c(57,15): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\wybieracz\source\repos\pk2\lab-01\lab_1_zad_2-3\lab_1_zad_2-3\source.c(57,45): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\wybieracz\source\repos\pk2\lab-01\lab_1_zad_2-3\lab_1_zad_2-3\source.c(80,21): warning C4018: "<=": niezgodność typu ze znakiem/bez znaku
+C:\Users\wybieracz\source\repos\pk2\lab-01\lab_1_zad_2-3\lab_1_zad_2-3\source.c(80,59): warning C4018: "<=": niezgodność typu ze znakiem/bez znaku
+C:\Users\wybieracz\source\repos\pk2\lab-01\lab_1_zad_2-3\lab_1_zad_2-3\source.c(82,28): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+  lab_1_zad_2-3.vcxproj -> C:\Users\wybieracz\source\repos\pk2\lab-01\lab_1_zad_2-3\Debug\lab_1_zad_2-3.exe
