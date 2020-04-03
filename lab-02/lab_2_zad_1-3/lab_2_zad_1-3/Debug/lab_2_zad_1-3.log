@@ -1,0 +1,5 @@
+﻿  source.c
+C:\Users\wybieracz\source\repos\pk2\lab-02\lab_2_zad_1-3\lab_2_zad_1-3\source.c(30,18): warning C4244: "funkcja": konwersja z "time_t" do "unsigned int", możliwa utrata danych
+C:\Users\wybieracz\source\repos\pk2\lab-02\lab_2_zad_1-3\lab_2_zad_1-3\source.c(121,29): warning C4047: "funkcja": "element **" różni się w poziomach operatorów pośrednich od "element *"
+C:\Users\wybieracz\source\repos\pk2\lab-02\lab_2_zad_1-3\lab_2_zad_1-3\source.c(121,29): warning C4024: "deleteList": różne typy dla formalnego i rzeczywistego parametru 1
+  lab_2_zad_1-3.vcxproj -> C:\Users\wybieracz\source\repos\pk2\lab-02\lab_2_zad_1-3\Debug\lab_2_zad_1-3.exe
