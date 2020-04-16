@@ -1,0 +1,4 @@
+﻿  source.c
+C:\Users\wybieracz\source\repos\pk2\lab-03\lab_3_zad_1\lab_3_zad_1\source.c(45,13): warning C4013: niezdefiniowany "isdigit"; przy założeniu, że extern zwraca int
+C:\Users\wybieracz\source\repos\pk2\lab-03\lab_3_zad_1\lab_3_zad_1\source.c(74,1): error C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C and C++ conformant name: _strdup. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\ucrt\string.h(536): message : zobacz deklarację „strdup”
