@@ -1,0 +1,8 @@
+{
+	"params": {
+		"kolumny": 3,
+		"wiersze": 10,
+		"zakres dolny": 1,
+		"zakres gorny": 99,
+	}
+}

@@ -119,10 +119,10 @@ unsigned int countR(element* pHead, unsigned int value) {
 @date 2020-04-02
 @param pHead wskaŸnik na pocz¹tek lsty
 */
-void deleteList(element** pHead) {
+void usunListe(element** pHead) {
 
 	if (*pHead) {
-		deleteList((*pHead)->pNext);
+		usunListe((*pHead)->pNext);
 		(*pHead)->pPrev->pNext = NULL;
 		free(*pHead);
 		*pHead = NULL;
@@ -147,7 +147,7 @@ void makeListAndCount(RGB* tab) {
 
 	printf("\nIlosc elementow o skladowej R wiekszej niz %d: %d", 128, countR(pHead, 128));
 
-	deleteList(&pHead);
+	usunListe(&pHead);
 }
 
 /** Funkcja tworzy listê dwukierunkow¹ z tablicy kolorów a nastêpnie zlicza wartoœci wiêksze od zadanej sk³adowej, wersja z arytmetyk¹ wskaŸników

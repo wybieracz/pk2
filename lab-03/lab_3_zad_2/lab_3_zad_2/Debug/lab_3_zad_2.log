@@ -1,2 +1,5 @@
 ﻿  source.c
+C:\Users\wybieracz\source\repos\pk2\lab-03\lab_3_zad_2\lab_3_zad_2\source.c(267,21): warning C4018: "<": niezgodność typu ze znakiem/bez znaku
+C:\Users\wybieracz\source\repos\pk2\lab-03\lab_3_zad_2\lab_3_zad_2\source.c(343,49): warning C4244: "return": konwersja z "int" do "float", możliwa utrata danych
+C:\Users\wybieracz\source\repos\pk2\lab-03\lab_3_zad_2\lab_3_zad_2\source.c(274): warning C4715: "wypiszEl”: niewszystkie ścieżki kodu zwracają wartość
   lab_3_zad_2.vcxproj -> C:\Users\wybieracz\source\repos\pk2\lab-03\lab_3_zad_2\Debug\lab_3_zad_2.exe
