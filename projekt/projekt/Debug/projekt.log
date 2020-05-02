@@ -1,0 +1,4 @@
+﻿  function.c
+C:\Users\wybieracz\source\repos\pk2\projekt\projekt\struct.h(2,1): warning C4005: "_CRT_SECURE_NO_WARNINGS": ponowna definicja makra
+C:\Users\wybieracz\source\repos\pk2\projekt\projekt\function.c(1): message : zobacz poprzednią definicję „_CRT_SECURE_NO_WARNINGS”
+  projekt.vcxproj -> C:\Users\wybieracz\source\repos\pk2\projekt\Debug\projekt.exe

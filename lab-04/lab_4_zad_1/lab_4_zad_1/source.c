@@ -10,6 +10,7 @@
 #include <stdbool.h>
 #include <assert.h>
 #include <string.h>
+#include <Windows.h>
 
 
 /** Funkcja kopiuje zawartoœæ pliku do bufora
@@ -80,6 +81,7 @@ int main() {
 	openFile(&buffer);
 	printf("Znaleziono liczby rzymskie:\n");
 	printNum(buffer);
+	Sleep(10000);
 	free(buffer);
 	}
 	_CrtDumpMemoryLeaks();
