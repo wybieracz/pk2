@@ -27,6 +27,7 @@ int main(int argc, char* argv[]) {
 			element* pHead = NULL;
 
 			generete(input, &pHead);
+			printMap(pHead, 0);
 			deleteList(&pHead);
 		}
 

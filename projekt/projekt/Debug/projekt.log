@@ -1,4 +1,8 @@
 ﻿  function.c
-C:\Users\wybieracz\source\repos\pk2\projekt\projekt\struct.h(2,1): warning C4005: "_CRT_SECURE_NO_WARNINGS": ponowna definicja makra
-C:\Users\wybieracz\source\repos\pk2\projekt\projekt\function.c(1): message : zobacz poprzednią definicję „_CRT_SECURE_NO_WARNINGS”
+  source.c
+C:\Users\wybieracz\source\repos\pk2\projekt\projekt\function.c(199,40): warning C4028: formalny parametr 1 różni się od deklaracji
+C:\Users\wybieracz\source\repos\pk2\projekt\projekt\source.c(30,18): warning C4047: "funkcja": "element **" różni się w poziomach operatorów pośrednich od "element *"
+C:\Users\wybieracz\source\repos\pk2\projekt\projekt\source.c(30,18): warning C4024: "printMap": różne typy dla formalnego i rzeczywistego parametru 1
+  Generowanie kodu...
+C:\Users\wybieracz\source\repos\pk2\projekt\projekt\source.c(34,22): warning C4013: niezdefiniowany "_CrtDumpMemoryLeaks"; przy założeniu, że extern zwraca int
   projekt.vcxproj -> C:\Users\wybieracz\source\repos\pk2\projekt\Debug\projekt.exe

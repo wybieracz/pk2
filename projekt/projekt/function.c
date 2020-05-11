@@ -81,6 +81,19 @@ void openFile(char** buffer, char* input) {
 	fclose(pFile);
 }
 
+bool linkcmp(char* parent, char* link, int bytes) {
+
+	if (parent && link) {
+
+		if (memcmp(parent, link, bytes) != 0) return false;
+		else return true;
+	}
+	else {
+
+		return false;
+	}
+}
+
 void addTitle(element** pHead, char* buffer) {
 	
 	char* begin = NULL;
@@ -103,6 +116,61 @@ void addTitle(element** pHead, char* buffer) {
 	}
 }
 
+void addElement(element** pHead, char* begin, char* end) {
+
+	if (*pHead) {
+
+		if ((*pHead)->pNext) {
+			addElement(&(*pHead)->pNext, begin, end);
+		}
+		else {
+
+			(*pHead)->pNext = (element*)malloc(sizeof(element));
+			(*pHead)->pNext->pNext = NULL;
+			(*pHead)->pNext->subPage = NULL;
+			(*pHead)->pNext->title = NULL;
+			(*pHead)->pNext->link = NULL;
+
+			int byte = end - begin;
+			(*pHead)->pNext->link = (char*)malloc(byte + 1);
+			memcpy((*pHead)->pNext->link, begin, byte);
+			(*pHead)->pNext->link[byte] = '\0';
+		}
+	}
+	else {
+
+		*pHead = (element*)malloc(sizeof(element));
+		(*pHead)->pNext = NULL;
+		(*pHead)->subPage = NULL;
+		(*pHead)->title = NULL;
+		(*pHead)->link = NULL;
+
+		int byte = end - begin;
+		(*pHead)->link = (char*)malloc(byte + 1);
+		memcpy((*pHead)->link, begin, byte);
+		(*pHead)->link[byte] = '\0';
+	}
+}
+
+void addSubPages(element** pHead, char* buffer, char* parent) {
+
+	char* begin = buffer;
+	char* end = NULL;
+
+	while (begin) {
+
+		begin = strstr(begin, "<a href=\"");
+		if (begin) end = strstr(begin, "\">");
+
+		if (begin && end && !linkcmp(parent, begin + 9, strlen(parent))) {
+
+			addElement(&(*pHead)->subPage, begin + 9, end);
+		}
+
+		if(begin) begin = end + 2;
+	}
+}
+
 void generete(char* input, element** pHead) {
 
 	char* buffer = NULL;
@@ -115,11 +183,11 @@ void generete(char* input, element** pHead) {
 		(*pHead)->pNext = NULL;
 		(*pHead)->subPage = NULL;
 		(*pHead)->title= NULL;
-		(*pHead)->link = NULL;
+		(*pHead)->link = (char*)malloc(strlen(input) + 1);
+		memcpy((*pHead)->link, input, strlen(input)+1);
 
 		addTitle(pHead, buffer);
-
-		printf("%s\n", (*pHead)->title);
+		addSubPages(pHead, buffer, (*pHead)->link);
 
 		free(buffer);
 	}
@@ -128,27 +196,32 @@ void generete(char* input, element** pHead) {
 	}
 }
 
+void printMap(element* pHead, int cut) {
+
+	if (pHead) {
+
+		for (int i = 0; i < cut; i++) printf("\t");
+		if ((pHead)->title) printf("%s ", (pHead)->title);
+		else printf("<unknown title> ");
+		if ((pHead)->link) printf("%s\n", (pHead)->link);
+		else printf("<unknown link>\n");
+
+		printMap((pHead)->pNext, cut);
+		printMap((pHead)->subPage, cut + 1);
+	}
+}
+
 void deleteList(element** pHead) {
 
 	if (*pHead) {
 
 		deleteList(&(*pHead)->pNext);
-
-		if ((*pHead)->subPage) {
-
-			deleteList(&(*pHead)->subPage);
-
-			free((*pHead)->title);
-			free((*pHead)->link);
-			free(*pHead);
-			*pHead = NULL;
-		}
+		deleteList(&(*pHead)->subPage);
 
 		free((*pHead)->title);
 		free((*pHead)->link);
 		free(*pHead);
 		*pHead = NULL;
-
 	}
 }
 #endif

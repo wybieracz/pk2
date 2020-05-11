@@ -34,6 +34,16 @@ void help();
 */
 void openFile(char** buffer, char* input);
 
+/** Funkcja sprawdza czy dany link nie jest strona rodzicem
+@author Michal Pawlowski
+@date 2020-05-01
+@param parent link strony rodzica
+@param link znaleziony link
+@param bytes liczba bitow do sprawdzenia
+@return prawde jezeli link jest strona rodzicem
+*/
+bool linkcmp(char* parent, char* link, int bytes);
+
 /** Funkcja dodaje tytul do aktualnie przetwarzanego elementu
 @author Michal Pawlowski
 @date 2020-05-01
@@ -42,6 +52,24 @@ void openFile(char** buffer, char* input);
 */
 void addTitle(element** pHead, char* buffer);
 
+/** Funkcja dodaje nowy element do listy
+@author Michal Pawlowski
+@date 2020-05-01
+@param [in,out] wskaznik na glowe listy
+@param begin wskaznik na poczatek linku strony dodawanej
+param end wskaznik na koniec linku trony dodawanej
+*/
+void addElement(element** pHead, char* begin, char* end);
+
+/** Funkcja wyszukuje i dodaje podstrony do struktury
+@author Michal Pawlowski
+@date 2020-05-01
+@param [in,out] wskaznik na glowe listy
+@param buffer wskaznik na bufor z zawartoscia z pliku
+param parent wskaznik na link strony rodzica
+*/
+void addSubPages(element** pHead, char* buffer, char* parent);
+
 /** Funkcja tworzy mape witryny oparta na liscie podwieszanej
 @author Michal Pawlowski
 @date 2020-05-01
@@ -49,6 +77,14 @@ void addTitle(element** pHead, char* buffer);
 @param [in,out] wskaznik na glowe listy
 */
 void generete(char* input, element** pHead);
+
+/** Funkcja wypisuje na konsoli cala strukture
+@author Michal Pawlowski
+@date 2020-05-01
+@param pHead wskaznik na glowe struktury
+@param cut wciecie dla podstron
+*/
+void printMap(element** pHead, int cut);
 
 /** Funkcja usuwa cala strukture danych - liste podwieszana
 @date 2020-04-02
