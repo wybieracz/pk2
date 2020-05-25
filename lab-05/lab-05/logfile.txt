@@ -1,0 +1,64 @@
+Gate status: Closed
+Gate status: Closed
+Gate status: Closed
+Gate status: Closed
+Gate status: Closed
+Gate status: Closed in 90%
+Gate status: Closed in 80%
+Gate status: Closed in 70%
+Gate status: Closed in 60%
+Gate status: Closed in 50%
+Gate status: Closed in 40%
+Gate status: Closed in 30%
+Gate status: Closed in 20%
+Gate status: Closed in 20% (Stopped)
+Gate status: Closed in 20% (Stopped)
+Gate status: Closed in 20% (Stopped)
+Gate status: Closed in 20% (Stopped)
+Gate status: Closed in 20% (Stopped)
+Gate status: Closed in 20% (Stopped)
+Gate status: Closed in 20% (Stopped)
+Gate status: Closed in 20% (Stopped)
+Gate status: Closed in 20% (Stopped)
+Gate status: Closed in 10%
+Gate status: Open
+Gate status: Open
+Gate status: Open
+Gate status: Open
+Gate status: Open
+Gate status: Open
+Gate status: Open
+Gate status: Open
+Gate status: Open
+Gate status: Open
+Gate status: Open
+Gate status: Open
+Gate status: Open
+Gate status: Open
+Gate status: Open
+Gate status: Open
+Gate status: Open
+Gate status: Open
+Gate status: Closed in 10%
+Gate status: Closed in 20%
+Gate status: Closed in 30%
+Gate status: Closed in 40%
+Gate status: Closed in 50%
+Gate status: Closed in 60%
+Gate status: Closed in 60% (Stopped)
+Gate status: Closed in 60% (Stopped)
+Gate status: Closed in 60% (Stopped)
+Gate status: Closed in 60% (Stopped)
+Gate status: Closed in 60% (Stopped)
+Gate status: Closed in 60% (Stopped)
+Gate status: Closed in 60% (Stopped)
+Gate status: Closed in 60% (Stopped)
+Gate status: Closed in 50%
+Gate status: Closed in 40%
+Gate status: Closed in 40% (Stopped)
+Gate status: Closed in 40% (Stopped)
+Gate status: Closed in 50%
+Gate status: Closed in 60%
+Gate status: Closed in 70%
+Gate status: Closed in 80%
+INFO: Program Stopped!

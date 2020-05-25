@@ -70,13 +70,21 @@ param parent wskaznik na link strony rodzica
 */
 void addSubPages(element** pHead, char* buffer, char* parent);
 
-/** Funkcja tworzy mape witryny oparta na liscie podwieszanej
+/** Funkcja tworzy pierwszy element struktury
 @author Michal Pawlowski
 @date 2020-05-01
 @param input wskaznik na nazwe pliku strony glownej
 @param [in,out] wskaznik na glowe listy
 */
-void generete(char* input, element** pHead);
+void createFirst(element** pHead, char* input);
+
+/** Funkcja tworzy mape witryny oparta na liscie podwieszanej
+@author Michal Pawlowski
+@date 2020-05-01
+@param input wskaznik na nazwe pliku strony glownej
+@param [in,out] wskaznik na zaalokowana glowe listy
+*/
+void generete(element** pHead, char* input);
 
 /** Funkcja wypisuje na konsoli cala strukture
 @author Michal Pawlowski

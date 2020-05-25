@@ -65,7 +65,7 @@ void openFile(char** buffer, char* input) {
 	long lSize;
 	size_t result;
 
-	pFile = fopen("index.html", "rb");
+	pFile = fopen(input, "rb");
 	if (pFile == NULL) { fputs("WARNING: File error!", stderr); exit(1); }
 
 	fseek(pFile, 0, SEEK_END);
@@ -96,23 +96,26 @@ bool linkcmp(char* parent, char* link, int bytes) {
 
 void addTitle(element** pHead, char* buffer) {
 	
-	char* begin = NULL;
-	char* end = NULL;
+	if (*pHead) {
 
-	begin = strstr(buffer, "<title>");
-	end = strstr(buffer, "</title>");
+		char* begin = NULL;
+		char* end = NULL;
 
-	if (begin && end) {
+		begin = strstr(buffer, "<title>");
+		end = strstr(buffer, "</title>");
 
-		int byte = end - (begin + 7);
-		(*pHead)->title = (char*)malloc(byte + 1);
-		memcpy((*pHead)->title, begin + 7, byte);
-		(*pHead)->title[byte] = '\0';
-	}
-	else {
+		if (begin && end) {
 
-		(*pHead)->title = (char*)malloc(16);
-		strcpy((*pHead)->title, "<Title unknown>");
+			int byte = end - (begin + 7);
+			(*pHead)->title = (char*)malloc(byte + 1);
+			memcpy((*pHead)->title, begin + 7, byte);
+			(*pHead)->title[byte] = '\0';
+		}
+		else {
+
+			(*pHead)->title = (char*)malloc(16);
+			strcpy((*pHead)->title, "<Title unknown>");
+		}
 	}
 }
 
@@ -171,28 +174,36 @@ void addSubPages(element** pHead, char* buffer, char* parent) {
 	}
 }
 
-void generete(char* input, element** pHead) {
+void createFirst(element** pHead, char* input) {
 
-	char* buffer = NULL;
+	*pHead = (element*)malloc(sizeof(element));
+	(*pHead)->pNext = NULL;
+	(*pHead)->subPage = NULL;
+	(*pHead)->title = NULL;
+	(*pHead)->link = (char*)malloc(strlen(input) + 1);
+	memcpy((*pHead)->link, input, strlen(input) + 1);
+}
 
-	openFile(&buffer, input);
+void generete(element** pHead, char* input) {
 
-	if (buffer) {
-		
-		*pHead = (element*)malloc(sizeof(element));
-		(*pHead)->pNext = NULL;
-		(*pHead)->subPage = NULL;
-		(*pHead)->title= NULL;
-		(*pHead)->link = (char*)malloc(strlen(input) + 1);
-		memcpy((*pHead)->link, input, strlen(input)+1);
+	if (*pHead) {
 
-		addTitle(pHead, buffer);
-		addSubPages(pHead, buffer, (*pHead)->link);
+		char* buffer = NULL;
 
-		free(buffer);
-	}
-	else {
-		exit(1);
+		openFile(&buffer, input);
+
+		if (buffer) {
+
+			addTitle(&(*pHead), buffer);
+			addSubPages(&(*pHead), buffer, (*pHead)->link);
+			free(buffer);
+		}
+		else {
+			exit(1);
+		}
+
+		if((*pHead)->subPage) generete((*pHead)->subPage, (*pHead)->subPage->link);
+		if((*pHead)->pNext) generete((*pHead)->pNext, (*pHead)->pNext->link);
 	}
 }
 
@@ -201,10 +212,10 @@ void printMap(element* pHead, int cut) {
 	if (pHead) {
 
 		for (int i = 0; i < cut; i++) printf("\t");
-		if ((pHead)->title) printf("%s ", (pHead)->title);
-		else printf("<unknown title> ");
-		if ((pHead)->link) printf("%s\n", (pHead)->link);
-		else printf("<unknown link>\n");
+		if ((pHead)->title) printf("%s\n", (pHead)->title);
+		else printf("<unknown title>\n");
+		//if ((pHead)->link) printf("%s\n", (pHead)->link);
+		//else printf("<unknown link>\n");
 
 		printMap((pHead)->pNext, cut);
 		printMap((pHead)->subPage, cut + 1);

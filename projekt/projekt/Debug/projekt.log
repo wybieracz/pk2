@@ -1,8 +1,7 @@
 ﻿  function.c
-  source.c
-C:\Users\wybieracz\source\repos\pk2\projekt\projekt\function.c(199,40): warning C4028: formalny parametr 1 różni się od deklaracji
-C:\Users\wybieracz\source\repos\pk2\projekt\projekt\source.c(30,18): warning C4047: "funkcja": "element **" różni się w poziomach operatorów pośrednich od "element *"
-C:\Users\wybieracz\source\repos\pk2\projekt\projekt\source.c(30,18): warning C4024: "printMap": różne typy dla formalnego i rzeczywistego parametru 1
-  Generowanie kodu...
-C:\Users\wybieracz\source\repos\pk2\projekt\projekt\source.c(34,22): warning C4013: niezdefiniowany "_CrtDumpMemoryLeaks"; przy założeniu, że extern zwraca int
+C:\Users\wybieracz\source\repos\pk2\projekt\projekt\function.c(205,51): warning C4047: "funkcja": "element **" różni się w poziomach operatorów pośrednich od "element *"
+C:\Users\wybieracz\source\repos\pk2\projekt\projekt\function.c(205,51): warning C4024: "generete": różne typy dla formalnego i rzeczywistego parametru 1
+C:\Users\wybieracz\source\repos\pk2\projekt\projekt\function.c(206,47): warning C4047: "funkcja": "element **" różni się w poziomach operatorów pośrednich od "element *"
+C:\Users\wybieracz\source\repos\pk2\projekt\projekt\function.c(206,47): warning C4024: "generete": różne typy dla formalnego i rzeczywistego parametru 1
+C:\Users\wybieracz\source\repos\pk2\projekt\projekt\function.c(210,40): warning C4028: formalny parametr 1 różni się od deklaracji
   projekt.vcxproj -> C:\Users\wybieracz\source\repos\pk2\projekt\Debug\projekt.exe

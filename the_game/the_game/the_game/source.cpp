@@ -2,6 +2,10 @@
 #include <iomanip>
 #include <Windows.h>
 
+#define NICK "admin"
+#define PASS "admin"
+#define Q1 "gran"
+
 using namespace std;
 HANDLE  hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 
@@ -114,9 +118,9 @@ void printStart() {
 void login() {
 	SetConsoleTextAttribute(hConsole, 15);
 
-	string nick, nickGood = "admin";
-	string pass, passGood = "admin";
-	string quest2, questGood2 = "gran";
+	string nick;
+	string pass;
+	string quest2;
 
 	do {
 		do {
@@ -125,21 +129,21 @@ void login() {
 			cout << "Password: ";
 			cin >> pass;
 
-			if (nick != nickGood) {
+			if (nick != NICK) {
 				SetConsoleTextAttribute(hConsole, 12);
 				cout << "Couldn't find that username." << endl;
 				Sleep(2000);
 				system("CLS");
 			}
 
-			if (nick == nickGood && pass != passGood) {
+			if (nick == NICK && pass != PASS) {
 				SetConsoleTextAttribute(hConsole, 12);
 				cout << "Wrong password." << endl;
 				Sleep(2000);
 				system("CLS");
 			}
 			SetConsoleTextAttribute(hConsole, 15);
-		} while ((nick != nickGood) || (pass != passGood));
+		} while ((nick != NICK) || (pass != PASS));
 
 		SetConsoleTextAttribute(hConsole, 10);
 		Sleep(500);
@@ -148,7 +152,7 @@ void login() {
 		cout << "2. Favourite song: ";
 		cin >> quest2;
 
-		if (quest2.compare(questGood2)) {
+		if (quest2.compare(Q1)) {
 
 			SetConsoleTextAttribute(hConsole, 12);
 			cout << "You've been kicked!" << endl;
@@ -157,7 +161,7 @@ void login() {
 			system("CLS");
 		}
 
-	} while (quest2 != questGood2);
+	} while (quest2 !=Q1);
 	
 	SetConsoleTextAttribute(hConsole, 10);
 	cout << "Logging in";
