@@ -27,8 +27,9 @@ int main(int argc, char* argv[]) {
 			element* pHead = NULL;
 
 			createFirst(&pHead, input);
-			generete(&pHead, pHead->link);
+			generete(&pHead, NULL);
 			printMap(pHead, 0);
+			saveMap(pHead, output, ext);
 			deleteList(&pHead);
 		}
 

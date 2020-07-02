@@ -1,7 +1,4 @@
 ﻿  function.c
-C:\Users\wybieracz\source\repos\pk2\projekt\projekt\function.c(205,51): warning C4047: "funkcja": "element **" różni się w poziomach operatorów pośrednich od "element *"
-C:\Users\wybieracz\source\repos\pk2\projekt\projekt\function.c(205,51): warning C4024: "generete": różne typy dla formalnego i rzeczywistego parametru 1
-C:\Users\wybieracz\source\repos\pk2\projekt\projekt\function.c(206,47): warning C4047: "funkcja": "element **" różni się w poziomach operatorów pośrednich od "element *"
-C:\Users\wybieracz\source\repos\pk2\projekt\projekt\function.c(206,47): warning C4024: "generete": różne typy dla formalnego i rzeczywistego parametru 1
-C:\Users\wybieracz\source\repos\pk2\projekt\projekt\function.c(210,40): warning C4028: formalny parametr 1 różni się od deklaracji
+C:\Users\wybieracz\source\repos\pk2\projekt\projekt\function.c(75,46): warning C4244: "funkcja": konwersja z "__int64" do "size_t", możliwa utrata danych
+C:\Users\wybieracz\source\repos\pk2\projekt\projekt\function.c(78,34): warning C4244: "funkcja": konwersja z "__int64" do "size_t", możliwa utrata danych
   projekt.vcxproj -> C:\Users\wybieracz\source\repos\pk2\projekt\Debug\projekt.exe

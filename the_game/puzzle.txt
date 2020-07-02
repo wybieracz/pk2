@@ -1,0 +1,16 @@
+Oscar and Jack are trying to figure out which geometric figure form below is Lily's favourite one.
+
+-> yellow star
+-> magenta star
+-> yellow triangle
+-> cyjan triangle
+-> yellow square
+-> magenta square
+-> yellow hexagon
+-> cyjan circle
+-> magenta circle
+
+Oscar knows, that Lily told Jack which shape it is and Jack knows, that Oscar knows what color the shape is.
+Then Oscar said: "I don't know which figure is Lily's favourite one, but I know that Jack also doesn't know that".
+Jack replied: "At the begining I didn't know Lily's favourite figure, but now I know". Hearding that, Oscar said:
+Now, I also know it". What is Lily's favourite figure?

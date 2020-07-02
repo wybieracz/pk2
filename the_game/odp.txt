@@ -1,0 +1,13 @@
+Rozwiązanie:
+
+1. (Odrzucamy białe, ponieważ unikalnym kształtem jest sześciokąt.)
+Gdyby była to figura biała Adam nie mógłby stwierdzić, że Bartek nie wie która jest to figura,
+ponieważ mógłby być to sześciokąt i wtedy Bartek już by to wiedział.
+
+2. Bartek wiedząc już, że nie jest to figura biała stwierdza, że już wie która jest to figura. (Odrzucamy koła, ponieważ odrzucenie
+białych figur nie eliminuje żadnego z kół.)
+
+3. Adam wiedząc, że odrzucenie białego koloru pozwoliło ustalić figurę Bartkowi, też już wie jaka jest to figura.
+(Pozostały figury: czarna gwiazda, szary trójkąt, czarny kwadrat. Adam znając kolor może wyróźnić jedynie szary trójkąt.)
+
+4. Odpowiedź to SZARY TRÓJKĄT

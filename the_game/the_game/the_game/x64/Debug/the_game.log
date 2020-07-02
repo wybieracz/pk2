@@ -1,0 +1,4 @@
+﻿  source.cpp
+C:\Users\wybieracz\source\repos\pk2\the_game\the_game\the_game\source.cpp(41,13): warning C4309: "inicjowanie": obcięcie stałej wartości
+C:\Users\wybieracz\source\repos\pk2\the_game\the_game\the_game\source.cpp(284,25): warning C4267: "inicjowanie": konwersja z "size_t" do "int", możliwa utrata danych
+  the_game.vcxproj -> C:\Users\wybieracz\source\repos\pk2\the_game\the_game\x64\Debug\the_game.exe

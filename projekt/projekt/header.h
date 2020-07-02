@@ -66,9 +66,9 @@ void addElement(element** pHead, char* begin, char* end);
 @date 2020-05-01
 @param [in,out] wskaznik na glowe listy
 @param buffer wskaznik na bufor z zawartoscia z pliku
-param parent wskaznik na link strony rodzica
+param parent wskaznik na strone rodzica
 */
-void addSubPages(element** pHead, char* buffer, char* parent);
+void addSubPages(element** pHead, char* buffer, element* pParent);
 
 /** Funkcja tworzy pierwszy element struktury
 @author Michal Pawlowski
@@ -81,10 +81,18 @@ void createFirst(element** pHead, char* input);
 /** Funkcja tworzy mape witryny oparta na liscie podwieszanej
 @author Michal Pawlowski
 @date 2020-05-01
-@param input wskaznik na nazwe pliku strony glownej
 @param [in,out] wskaznik na zaalokowana glowe listy
+@param pParent wskaznik na strone rodzica
 */
-void generete(element** pHead, char* input);
+void generete(element** pHead, element* pParent);
+
+/** Funkcja generuje pelna nazwe pliku wyjsciowego
+@author Michal Pawlowski
+@date 2020-05-01
+@param name nazwa wysjciowa
+@param ext rozszerzenie wyjsciowe
+*/
+char* makeOutName(char* name, char* ext);
 
 /** Funkcja wypisuje na konsoli cala strukture
 @author Michal Pawlowski
@@ -92,7 +100,35 @@ void generete(element** pHead, char* input);
 @param pHead wskaznik na glowe struktury
 @param cut wciecie dla podstron
 */
-void printMap(element** pHead, int cut);
+void printMap(element* pHead, int cut);
+
+/** Funkcja wypisuje do pliku txt cala strukture
+@author Michal Pawlowski
+@date 2020-05-01
+@param pHead wskaznik na glowe struktury
+@param cut wciecie dla podstron
+@param pFile strumien wyjscia
+*/
+void printTxt(element* pHead, int cut, FILE* pFile);
+
+/** Funkcja wypisuje do pliku html cala strukture
+@author Michal Pawlowski
+@date 2020-05-01
+@param pHead wskaznik na glowe struktury
+@param cut wciecie dla podstron
+@param pFile strumien wyjscia
+*/
+void printHtml(element* pHead, int cut, FILE* pFile);
+
+/** Funkcja zapisuje cala strukture do pliku z wybranym rozszerzeniem
+@author Michal Pawlowski
+@date 2020-05-01
+@param pHead wskaznik na glowe struktury
+@param cut wciecie dla podstron
+@param name nazwa wyjsciowa pliku
+@param ext rozszerzenie pliku
+*/
+void saveMap(element* pHead, char* name, char* ext);
 
 /** Funkcja usuwa cala strukture danych - liste podwieszana
 @date 2020-04-02

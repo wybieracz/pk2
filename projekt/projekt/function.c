@@ -62,7 +62,7 @@ void help() {
 void openFile(char** buffer, char* input) {
 
 	FILE* pFile;
-	long lSize;
+	long long lSize;
 	size_t result;
 
 	pFile = fopen(input, "rb");
@@ -155,7 +155,7 @@ void addElement(element** pHead, char* begin, char* end) {
 	}
 }
 
-void addSubPages(element** pHead, char* buffer, char* parent) {
+void addSubPages(element** pHead, char* buffer, element* pParent) {
 
 	char* begin = buffer;
 	char* end = NULL;
@@ -165,7 +165,11 @@ void addSubPages(element** pHead, char* buffer, char* parent) {
 		begin = strstr(begin, "<a href=\"");
 		if (begin) end = strstr(begin, "\">");
 
-		if (begin && end && !linkcmp(parent, begin + 9, strlen(parent))) {
+		if (begin && end && !pParent) {
+
+			addElement(&(*pHead)->subPage, begin + 9, end);
+		}
+		else if (begin && end && pParent && !linkcmp(pParent->link, begin + 9, strlen(pParent->link))) {
 
 			addElement(&(*pHead)->subPage, begin + 9, end);
 		}
@@ -184,27 +188,39 @@ void createFirst(element** pHead, char* input) {
 	memcpy((*pHead)->link, input, strlen(input) + 1);
 }
 
-void generete(element** pHead, char* input) {
+void generete(element** pHead, element* pParent) {
 
 	if (*pHead) {
 
 		char* buffer = NULL;
 
-		openFile(&buffer, input);
+		openFile(&buffer, (*pHead)->link);
 
 		if (buffer) {
 
 			addTitle(&(*pHead), buffer);
-			addSubPages(&(*pHead), buffer, (*pHead)->link);
+			addSubPages(&(*pHead), buffer, pParent);
 			free(buffer);
 		}
 		else {
 			exit(1);
 		}
 
-		if((*pHead)->subPage) generete((*pHead)->subPage, (*pHead)->subPage->link);
-		if((*pHead)->pNext) generete((*pHead)->pNext, (*pHead)->pNext->link);
+		if((*pHead)->subPage) generete(&(*pHead)->subPage, *pHead);
+		if((*pHead)->pNext) generete(&(*pHead)->pNext, pParent);
 	}
+}
+
+char* makeOutName(char* name, char* ext) {
+
+	char* output = (char*)malloc(strlen(name) + strlen(ext) + 2);
+
+	strcpy(output, name);
+	output[strlen(name)] = '.';
+	strcpy(output + strlen(name) + 1, ext);
+	output[strlen(name) + strlen(ext) + 1] = '\0';
+
+	return output;
 }
 
 void printMap(element* pHead, int cut) {
@@ -212,13 +228,68 @@ void printMap(element* pHead, int cut) {
 	if (pHead) {
 
 		for (int i = 0; i < cut; i++) printf("\t");
-		if ((pHead)->title) printf("%s\n", (pHead)->title);
-		else printf("<unknown title>\n");
-		//if ((pHead)->link) printf("%s\n", (pHead)->link);
-		//else printf("<unknown link>\n");
 
-		printMap((pHead)->pNext, cut);
+		if ((pHead)->title) printf("> %s\n", (pHead)->title);
+		else printf("> <unknown title>\n");
+
+		printf("\n");
 		printMap((pHead)->subPage, cut + 1);
+		printMap((pHead)->pNext, cut);
+	}
+}
+
+void printTxt(element* pHead, int cut, FILE* pFile) {
+
+	if (pHead) {
+
+		for (int i = 0; i < cut; i++) fprintf(pFile, "\t");
+
+		if ((pHead)->title) fprintf(pFile, "> %s\n", (pHead)->title);
+		else fprintf(pFile, "> <unknown title>\n");
+
+		fprintf(pFile, "\n");
+		printTxt((pHead)->subPage, cut + 1, pFile);
+		printTxt((pHead)->pNext, cut, pFile);
+	}
+}
+
+void printHtml(element* pHead, int cut, FILE* pFile) {
+
+	if (pHead) {
+
+		if ((pHead)->title) fprintf(pFile, "<span style=\"margin-left:%dem\">> <a href=\"%s\">%s</a></span><br>\n", cut*2, (pHead)->link, (pHead)->title);
+		else fprintf(pFile, "<span style=\"margin-left:%dem\"> ><a href=\"%s\">Unknown title</a></span><br>\n", cut*2, (pHead)->link);
+
+		printHtml((pHead)->subPage, cut + 1, pFile);
+		printHtml((pHead)->pNext, cut, pFile);
+	}
+}
+
+void saveMap(element* pHead, char* name, char* ext) {
+
+	if (pHead) {
+
+		if (strcmp(ext, "txt") == 0 || strcmp(ext, "html") == 0) {
+
+			FILE* pFile;
+			char* output = makeOutName(name, ext);
+			pFile = fopen(output, "w");
+
+			if (strcmp(ext, "txt") == 0) printTxt(pHead, 0, pFile);
+
+			if (strcmp(ext, "html") == 0) {
+
+				fprintf(pFile, "<html>\n<head>\n<title>Website Map</title>\n</head>\n<body>\n");
+				printHtml(pHead, 0, pFile);
+				fprintf(pFile, "</body>\n</html>");
+			}
+
+			fclose(pFile);
+			free(output);
+		}
+		else {
+			fputs("WARNING: Saving file error! Unknown extension!\n", stderr);
+		}
 	}
 }
 
