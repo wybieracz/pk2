@@ -1,0 +1,345 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                            %
+%   W Z O R Z E C   S P R A W O Z D A N I A  %
+%                                            %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[12pt,a4paper,twoside]{article}
+
+\usepackage{amsmath,amssymb}
+\usepackage[utf8]{inputenc}                                      
+\usepackage[OT4]{fontenc}      
+%\usepackage[T1]{fontenc}                            
+\usepackage[polish]{babel}                           
+\selectlanguage{polish}
+\usepackage{indentfirst} 
+\usepackage[dvips]{graphicx}
+\usepackage{tabularx}
+\usepackage{color}
+\usepackage{hyperref} 
+\usepackage{fancyhdr}
+\usepackage{listings}
+\usepackage{booktabs}
+\usepackage{ifpdf}
+\usepackage{mathtext} % polskie znaki w trybie matematycznym
+%\makeindex  % utworzenie skorowidza (w dokumencie pdf)
+\usepackage{lmodern}
+%\usepackage[osf]{libertine}
+\usepackage{filecontents}
+\usepackage{ifthen}
+
+
+\usepackage{tikz}
+\usetikzlibrary{arrows}
+
+
+\newcounter{nextYear}
+\setcounter{nextYear}{\the\year}
+\stepcounter{nextYear}
+
+% rozszerzenie nieco strony
+%\setlength{\topmargin}{-1cm} \setlength{\textheight}{24.5cm}
+%\setlength{\textwidth}{17cm} \addtolength{\hoffset}{-1.5cm}
+%\setlength{\parindent}{0.5cm} \setlength{\footskip}{2cm}
+%\linespread{1.2} % odstep pomiedzy wierszami
+
+
+%%%% ZYWA PAGINA %%%%%%%%%%%
+\newcommand{\tl}[1]{\textbf{#1}} 
+\pagestyle{fancy}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\ #1}}
+\fancyhf{} % usuwanie bieżących ustawień
+\fancyhead[LE,RO]{\small\bfseries\thepage}
+\fancyhead[LO]{\small\bfseries\rightmark}
+\fancyhead[RE]{\small\bfseries\leftmark}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\footrulewidth}{0pt}
+\addtolength{\headheight}{0.5pt} % pionowy odstęp na kreskę
+\fancypagestyle{plain}{%
+\fancyhead{} % usuń p. górne na stronach pozbawionych numeracji
+\renewcommand{\headrulewidth}{0pt} % pozioma kreska
+}
+
+%%%%%   LISTINGI %%%%%%%%
+% ustawienia listingu programow
+
+\lstset{%
+language=C++,%
+commentstyle=\textit,%
+identifierstyle=\textsf,%
+keywordstyle=\sffamily\bfseries, %
+%captionpos=b,%
+tabsize=3,%
+frame=lines,%
+numbers=left,%
+numberstyle=\tiny,%
+numbersep=5pt,%
+breaklines=true,%
+morekeywords={pWezel,Wezel,string,ref,params_result},%
+escapeinside={(*@}{@*)},%
+%basicstyle=\footnotesize,%
+%keywords={double,int,for,if,return,vector,matrix,void,public,class,string,%
+%float,sizeof,char,FILE,while,do,const}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%  NOTKI NA MARGINESIE %%%%%%%%%%%%%
+% mala zmiana sposobu wyswietlania notek bocznych
+\let\oldmarginpar\marginpar
+\renewcommand\marginpar[1]{%
+  {\linespread{0.85}\normalfont\scriptsize%
+\oldmarginpar[\hspace{1cm}\begin{minipage}{3cm}\raggedleft\scriptsize\color{black}\textsf{#1}\end{minipage}]%    left pages
+{\hspace{0cm}\begin{minipage}{3cm}\raggedright\scriptsize\color{black}\textsf{#1}\end{minipage}}% right pages
+}%
+}
+% % % % % % % % % % % % % % % % % % % % % % % % % % % % % % % %
+
+%%%% WYSWIETLANIE AKTUALNEGO ROKU AKADEMICKIEGO %%%%%%%%%%%
+\newcounter{rok}
+\newcommand{\rokakademicki}{%
+   \setcounter{rok}{\number\year}%
+   \ifthenelse{\number\month<10}%
+   {\addtocounter{rok}{-1}}% rok akademicki zaczal sie w pazdzierniku poprzedniego roku
+   {}%                       rok akademicki zaczyna sie w pazdzierniku tego roku
+   \arabic{rok}/\addtocounter{rok}{1}\arabic{rok}
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%% LISTA UWAG %%%%%%%%%
+\usepackage{color}
+\definecolor{brickred}      {cmyk}{0   , 0.89, 0.94, 0.28}
+
+\makeatletter \newcommand \kslistofremarks{\section*{Uwagi} \@starttoc{rks}}
+\newcommand\l@uwagas[2]
+{\par\noindent \textbf{#2:} %\parbox{10cm}
+   {#1}\par} \makeatother
+
+
+\newcommand{\ksremark}[1]{%
+   {{\color{brickred}{[#1]}}}%
+   \addcontentsline{rks}{uwagas}{\protect{#1}}%
+}
+
+\newcommand{\comma}{\ksremark{przecinek}}
+\newcommand{\nocomma}{\ksremark{bez przecinka}}
+\newcommand{\styl}{\ksremark{styl}}
+\newcommand{\ortografia}{\ksremark{ortografia}}
+\newcommand{\fleksja}{\ksremark{fleksja}}
+\newcommand{\pauza}{\ksremark{pauza `--', nie dywiz `-'}}
+\newcommand{\kolokwializm}{\ksremark{kolokwializm}}
+\newcommand{\cytowanie}{\ksremark{cytowanie}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+% autor:
+\fancyhead[RE]{\small\bfseries Michał Pawłowski} % autor sprawozdania
+
+
+
+%%%%%%%%%%% NO I ZACZYNA SIE SPRAWOZDANIE %%%%%%%%%%%
+
+\begin{document}
+\frenchspacing
+\thispagestyle{empty}
+\begin{center}
+{\Large\sf Politechnika Śląska   % Alma Mater
+
+Wydział Informatyki, Elektroniki i Informatyki
+
+}
+
+\vfill
+
+ 
+
+\vfill\vfill
+
+{\Huge\sffamily\bfseries Programowanie Komputerów\par}  
+
+\vfill\vfill
+
+{\LARGE\sf Mapa Witryny}   
+
+
+\vfill \vfill\vfill\vfill
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+\begin{tabular}{ll}
+	\toprule
+	autor                       & Michał Pawłowski    \\
+	prowadzący                  &  mgr inż. Grzegorz Kwiatkowski   \\
+	rok akademicki              & \rokakademicki         \\
+	kierunek                    & informatyka            \\
+	rodzaj studiów              & SSI                    \\
+	semestr                     & 2                      \\
+	termin laboratorium         & piątek, 12:00 -- 13:30 \\
+	sekcja                      & 21                     \\
+	termin oddania sprawozdania & 2020-07-06             \\
+	\bottomrule
+	                            &
+\end{tabular}
+
+\end{center}
+%%% koniec strony  tytulowej
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Treść zadania}
+W folderze znajduje się strona internetowa zapisana w kilkunastu plikach o rozszerzeniu html. Strona główna zawiera hiperłącza do podstron. Podstrony zawierają hiperłącza do swoich podstron oraz strony nadrzędnej. Przykładowy kod podstrony \texttt{page1a.html}:\\
+\newline
+\texttt{<html>}\\
+\texttt{<head>}\\
+\texttt{<title> O Uczelni </title>}\\
+\texttt{</head>}\\
+\texttt{<body>}\\
+\texttt{<h1>O Uczelni</h1>}\\
+\texttt{<a href = ”page1aa.html”> Informacje </a>}\\
+\texttt{<a href = ”page1ab.html”> Historia </a>}\\
+\newline
+\texttt{<TREŚĆ>}\\
+\newline
+\texttt{<a href = ”page1.html”> Powrót </a>}\\
+\texttt{</body>}\\
+\texttt{</html>}\\
+
+W wyniki działania programu zostanie tworzony plik z mapą witryny\\
+\\
+\texttt{> Strona Główna}\\
+\texttt{\indent > Uczelnia}\\
+\texttt{\indent \indent > O Uczelni}\\
+\texttt{\indent \indent \indent > Informacje}\\
+\texttt{\indent \indent \indent > Historia}\\
+\texttt{\indent > Kandydat}\\
+\texttt{...}\\
+
+Program uruchamiany jest z linii poleceń z wykorzystaniem następujących przełączników:\\
+\\
+\begin{tabular}{ll}
+\texttt{-i}  & plik wejściowy ze stroną główną witryny\\
+\texttt{-o}  & nazwa pliku wyjściowego\\
+\texttt{-e}  & rozszerzenie pliku wyjściowego\\
+\end{tabular}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Analiza zadania}
+
+Zagadnienie przedstawia problem stworzenia mapy witryny w oparciu o drzewko plików witryny dostępnych dla programu.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Specyfikacja zewnętrzna}
+\label{sec:sp:zewnetrzna}
+Program jest uruchamiany z linii poleceń. Należy przekazać do programu nazwy plików: wejściowego, wyjściowego oraz rozszerzenie w którym ma być stworzony plik wyjściowy, korzystając z odpowiednich przełącznikach (odpowiednio: \texttt{-i} dla pliku wejściowego, \texttt{-o} dla nazwy pliku wyjściowego oraz \texttt{-e} dla rozszerzenia pliku wyjściowego), np.
+\begin{verbatim}
+-i index.html -o websiteMap -e html
+-e txt -i index.html -o map
+\end{verbatim}
+Plik wejściowy jest plikiem z rozszerzeniem .html . Plik wyjściowy może być wygenerowany z rozszerzeniem .txt lub .html, przy czym dla drugiego rozszerzenia aktywne będą hiperłącza do danych stron witryny. Przełączniki mogą być podane w dowolnej kolejności. Uruchomienie programu bez żadnego parametru lub z niewłaściwą ich liczbą powoduje wyświetlenie krótkiej pomocy oraz komunikatu
+\begin{verbatim}
+Program must be started with 3 parameters!
+\end{verbatim}
+
+Podanie nieprawidłowej nazwy pliku wejściowego powoduje wyświetlenie odpowiedniego komunikatu:
+\begin{verbatim}
+WARNING: File error!
+\end{verbatim}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Specyfikacja wewnętrzna}\label{sec:sp-wew}
+
+\subsection{Ogólna struktura programu}
+W funkcji głównej wywoływana jest funkcja \lstinline|paramsCheck|.
+Funkcja ta sprawdza, czy program został uruchomiony w prawidłowy sposób. Gdy program nie został wywołany prawidłowo, funkcja \lstinline|help| wypisuje stosowny komunikat i program się kończy.
+Następnie wywoływana jest funkcja \lstinline|createFirst|.
+Funkcja ta tworzy pierwszy element listy podwieszanej na wcześniej utworzonym wskaźniku. Zaalokowany element posiada jedynie nazwę pliku strony głównej. Nazwa ta została przekazana do programu w jednym z parametrów startowych. Pozostałe wskaźniki pierwszego elementu są wyzerowane.
+
+Kolejną wywoływaną funkcją jest \lstinline|generate|.
+Funkcja otwiera plik strony startowej i kopiuje jego zawartość do bufora. Zamyka plik a następnie za pomocą funkcji \lstinline|addTitle| wyszukuje tytuł aktualnie rozpatrywanej strony i przypisuje go do odpowiedniego elementu struktury. Ponowne przeszukanie bufora tym razem przy użyciu funkcji \lstinline|addSubPages| tworzy nowe elementy listy podwieszanej odpowiadające podstronom bieżąco rozpatrywanej strony. Na końcu funkcja zwalnia pamięć bufora oraz rekurencyjnie wywołuje samą siebie dla pierwszego elementu listy odchodzącej oraz kolejnego elementu listy bieżącej. Na koniec, wynik działania programu zostaje wypisany na konsoli przez funkcję \lstinline|printMap|  oraz zapisany do pliku dzięki funkcji \lstinline|saveMap|. \lstinline|deleteList| usuwa całą zaalokowaną strukturę.
+
+\begin{figure}
+\centering
+\begin{tikzpicture}
+
+%graf lista
+\node[circle, draw, minimum size=2.2cm] (I) at (-1,0) {$index.html$};
+	\node[circle, draw, minimum size=1.8cm] (1) at (-1,-3) {$1.html$};
+		\node[circle, draw, minimum size=1.5cm] (1a) at (2,-3) {$1a$};
+			\node[circle, draw] (1aa) at (2,-5) {$1aa$};
+			\node[circle, draw] (1ab) at (2,-7) {$1ab$};
+			\node[circle, draw] (1ac) at (2,-9) {$1ac$};
+		\node[circle, draw, minimum size=1.5cm] (1b) at (5,-3) {$1b$};
+			\node[circle, draw,] (1ba) at (5,-5) {$1ba$};
+			\node[circle, draw] (1bb) at (5,-7) {$1bb$};		
+		\node[circle, draw, minimum size=1.5cm] (1c) at (8,-3) {$1c$};
+	\node[circle, draw, minimum size=1.8cm] (2) at (-1,-10) {$2.html$};
+
+
+\draw[>=latex,->] (I) -- (1);
+	\draw[>=latex,->] (1) -- (2);
+		\draw[>=latex,->] (1) -- (1a);
+			\draw[>=latex,->] (1a) -- (1aa);
+			\draw[>=latex,->] (1aa) -- (1ab);
+			\draw[>=latex,->] (1ab) -- (1ac);
+		\draw[>=latex,->] (1a) -- (1b);
+			\draw[>=latex,->] (1b) -- (1ba);
+			\draw[>=latex,->] (1ba) -- (1bb);
+		\draw[>=latex,->] (1b) -- (1c);
+
+
+\end{tikzpicture}
+\caption{Przykład odwzorowania mapy witryny w pamięci programu poprzez listę wielokrotnie podwieszaną.}
+
+\label{fig:graf}
+\end{figure} 
+
+
+\subsection{Szczegółowy opis typów i funkcji}
+
+Szczegółowy opis typów i funkcji zawarty jest w załączniku.
+
+ 
+
+\section{Testowanie}
+Program został przetestowany na różnych plikach wejściowych. Pliki niepoprawne czyli zawierające błędny kod lub też pliki puste są równoważne stronom html nieposiadającym hiperłącz do podstron, zatem wygenerowany plik mapy witryny posiada jedynie stronę wczytaną do programu poprzez parametr startowy. Program został sprawdzony pod kątem wycieków pamięci.
+
+\section{Wnioski}
+Program generujący mapę witryny jest programem dość prostym. Wymagające jednak okazało się alokowanie elementów listy wielokrotnie podwieszanej oraz poprawne ich zwalnianie z pamięci.
+
+ 
+\cleardoublepage
+
+\rule{0cm}{0cm}
+
+\vfill
+
+\begin{center}
+\Huge\bfseries Dodatek\\Szczegółowy opis typów i~funkcji\par
+\end{center}
+
+\vfill 
+
+\rule{0cm}{0cm}
+
+\end{document}

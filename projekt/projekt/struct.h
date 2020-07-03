@@ -9,11 +9,19 @@
 #ifndef STRUCT
 #define STRUCT
 
+/** Deklaracja elementu listy podwieszanej
+@author Michal Pawlowski
+@date 2020-07-02
+*/
 typedef struct element {
 
+	/** wskaznik na nastepny wezel w liscie (strone o tej samej wadze) */
 	struct element* pNext;
+	/** wskaznik na nastepny wezel w liscie odchodzacej (podstrona) */
 	struct element* subPage;
+	/** tytul strony */
 	char* title;
+	/** nazwa pliku strony */
 	char* link;
 
 }element;
