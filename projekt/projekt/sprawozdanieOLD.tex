@@ -5,8 +5,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-\documentclass[12pt,a4paper]{article}
-%\documentclass[12pt,a4paper,twoside]{article}
+\documentclass[12pt,a4paper,twoside]{article}
 
 \usepackage{amsmath,amssymb}
 \usepackage[utf8]{inputenc}                                      
@@ -30,8 +29,6 @@
 \usepackage{filecontents}
 \usepackage{ifthen}
 
-%\usepackage[cp1250]{inputenc}
-\usepackage{graphicx} 
 
 \usepackage{tikz}
 \usetikzlibrary{arrows}
@@ -210,7 +207,7 @@ Wydział Informatyki, Elektroniki i Informatyki
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Temat}
+\section{Treść zadania}
 W folderze znajduje się strona internetowa zapisana w kilkunastu plikach o rozszerzeniu html. Strona główna zawiera hiperłącza do podstron. Podstrony zawierają hiperłącza do swoich podstron oraz strony nadrzędnej. Przykładowy kod podstrony \texttt{page1a.html}:\\
 \newline
 \texttt{<html>}\\
@@ -312,7 +309,7 @@ Funkcja otwiera plik strony startowej i kopiuje jego zawartość do bufora. Zamy
 
 
 \end{tikzpicture}
-\caption{ \centering Przykład odwzorowania mapy witryny w pamięci programu poprzez listę wielokrotnie podwieszaną.}
+\caption{Przykład odwzorowania mapy witryny w pamięci programu poprzez listę wielokrotnie podwieszaną.}
 
 \label{fig:graf}
 \end{figure} 
@@ -330,34 +327,6 @@ Program został przetestowany na różnych plikach wejściowych. Pliki niepopraw
 \section{Wnioski}
 Program generujący mapę witryny jest programem dość prostym. Wymagające jednak okazało się alokowanie elementów listy wielokrotnie podwieszanej oraz poprawne ich zwalnianie z pamięci.
 
-\section{Instrukcja dla użytkownika}
-Przed uruchomieniem programu, należy umieścić wszystkie pliki strony w folderze z programem. Następnie w wierszu poleceń przechodzimy do powyższej lokalizacji. Program należy uruchamiać z trzema parametrami. Odpowiednio: \texttt{-i} dla pełnej nazwy pliku wejściowego, \texttt{-o} dla nazwy pliku wyjściowego oraz \texttt{-e} dla rozszerzenia pliku wyjściowego.
-
-\begin{figure}[h]
-\centering
-\includegraphics[width=10cm]{cmd}
-\caption{Prawidłowe wywołanie programu w wierszu polecenia.}
-\label{fig:cmd}
-\end{figure}
-
-Należy zwrócić uwagę, aby plik wejściowy był stroną główną witryny. Użytkownik może wybrać między rozszerzeniem .txt a .html, dla innych rozszerzeń plik nie zostanie wygenerowany a program wypisze jedynie wynik działania na konsoli.
- 
-\begin{figure}
-\centering
-\includegraphics[width=10cm]{cmd2}
-\caption{Wynik działania programu widoczny w konsoli.}
-\label{fig:cmd2}
-\end{figure} 
- 
-\begin{figure}
-\centering
-\includegraphics[width=10cm]{html}
-\caption{ \centering Zaletą pliku .html wygenerowanego przez program, są aktywne hiperłącza do danych stron witryny.}
-\label{fig:html}
-\end{figure} 
-
-\section{Link do repozytorium}
-https://github.com/wybieracz/pk2/tree/master/projekt 
  
 \cleardoublepage
 

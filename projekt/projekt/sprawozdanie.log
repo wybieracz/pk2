@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.7.2)  4 JUL 2020 00:12
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2020.7.2)  7 JUL 2020 00:51
 entering extended mode
 **./sprawozdanie.tex
 (sprawozdanie.tex
@@ -750,7 +750,16 @@ File: pgflibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 \arrowsize=\dimen197
 ))
 \c@nextYear=\count146
- ("C:\Program Files (x86)\MiKTeX\tex/latex/listings\lstlang1.sty"
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 56.
+
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 58.
+
+("C:\Program Files (x86)\MiKTeX\tex/latex/listings\lstlang1.sty"
 File: lstlang1.sty 2019/09/10 1.8c listings language file
 )
 ("C:\Program Files (x86)\MiKTeX\tex/latex/listings\lstlang1.sty"
@@ -761,27 +770,31 @@ File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
 )
 \c@rok=\count147
 
+
+Package Fancyhdr Warning: \fancyhead's `E' option without twoside option is use
+less on input line 153.
+
 (sprawozdanie.aux)
 \openout1 = `sprawozdanie.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 156.
-LaTeX Font Info:    ... okay on input line 156.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for OT4/cmr/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 159.
+LaTeX Font Info:    ... okay on input line 159.
 LaTeX Font Info:    Trying to load font information for OT4+lmr on input line 1
-56.
+59.
  ("C:\Program Files (x86)\MiKTeX\tex/latex/lm\ot4lmr.fd"
 File: ot4lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
@@ -804,7 +817,7 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 85.
 )
 \AtBeginShipoutBox=\box45
-Package hyperref Info: Link coloring OFF on input line 156.
+Package hyperref Info: Link coloring OFF on input line 159.
 
 ("C:\Program Files (x86)\MiKTeX\tex/latex/hyperref\nameref.sty"
 Package: nameref 2019/09/16 v2.46 Cross-referencing by name of section
@@ -817,9 +830,9 @@ Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
 \c@section@level=\count154
 )
-LaTeX Info: Redefining \ref on input line 156.
-LaTeX Info: Redefining \pageref on input line 156.
-LaTeX Info: Redefining \nameref on input line 156.
+LaTeX Info: Redefining \ref on input line 159.
+LaTeX Info: Redefining \pageref on input line 159.
+LaTeX Info: Redefining \nameref on input line 159.
  (sprawozdanie.out) (sprawozdanie.out)
 \@outlinefile=\write4
 \openout4 = `sprawozdanie.out'.
@@ -827,48 +840,48 @@ LaTeX Info: Redefining \nameref on input line 156.
 \c@lstlisting=\count155
  ABD: EveryShipout initializing macros
 LaTeX Font Info:    Trying to load font information for OT4+lmss on input line 
-160.
+163.
 
 ("C:\Program Files (x86)\MiKTeX\tex/latex/lm\ot4lmss.fd"
 File: ot4lmss.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-87.
+90.
 
 ("C:\Program Files (x86)\MiKTeX\tex/latex/lm\ot1lmr.fd"
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-87.
+90.
 
 ("C:\Program Files (x86)\MiKTeX\tex/latex/lm\omllmm.fd"
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-187.
+190.
 
 ("C:\Program Files (x86)\MiKTeX\tex/latex/lm\omslmsy.fd"
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-187.
+190.
 
 ("C:\Program Files (x86)\MiKTeX\tex/latex/lm\omxlmex.fd"
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 187.
+(Font)              <12> on input line 190.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 187.
+(Font)              <8> on input line 190.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 187.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 187
+(Font)              <6> on input line 190.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 190
 .
 
 ("C:\Program Files (x86)\MiKTeX\tex/latex/amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 187
+LaTeX Font Info:    Trying to load font information for U+msb on input line 190
 .
 
 ("C:\Program Files (x86)\MiKTeX\tex/latex/amsfonts\umsb.fd"
@@ -878,6 +891,46 @@ Non-PDF special ignored!
 <special> papersize=597.50787pt,845.04684pt
 
 {C:/Users/wybieracz/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+LaTeX Font Info:    Trying to load font information for OT4+lmtt on input line 
+214.
+
+("C:\Program Files (x86)\MiKTeX\tex/latex/lm\ot4lmtt.fd"
+File: ot4lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
+)
+Underfull \hbox (badness 10000) in paragraph at lines 214--230
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 214--230
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 214--230
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 214--230
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 231--240
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 231--240
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 241--248
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.5pt): 
 Make it at least 13.59999pt.
@@ -886,71 +939,40 @@ This may cause the page layout to be inconsistent, however.
 
 [2
 
-]
-LaTeX Font Info:    Trying to load font information for OT4+lmtt on input line 
-211.
- ("C:\Program Files (x86)\MiKTeX\tex/latex/lm\ot4lmtt.fd"
-File: ot4lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Underfull \hbox (badness 10000) in paragraph at lines 211--227
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 211--227
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 211--227
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 211--227
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--237
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 228--237
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 238--245
-
- []
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3]
-[4]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5]
-[6] [7
+] [3] [4]
+<cmd.png, id=72, 470.9595pt x 172.2435pt>
+File: cmd.png Graphic file (type png)
+<use cmd.png>
+Package pdftex.def Info: cmd.png  used on input line 338.
+(pdftex.def)             Requested size: 284.52756pt x 104.06439pt.
+<cmd2.png, id=74, 472.76625pt x 393.26926pt>
+File: cmd2.png Graphic file (type png)
+<use cmd2.png>
+Package pdftex.def Info: cmd2.png  used on input line 347.
+(pdftex.def)             Requested size: 284.52756pt x 236.68947pt.
+<html.png, id=75, 476.982pt x 295.1025pt>
+File: html.png Graphic file (type png)
+<use html.png>
+Package pdftex.def Info: html.png  used on input line 354.
+(pdftex.def)             Requested size: 284.52756pt x 176.0362pt.
+ [5 <./cmd.png>] [6 <./cmd2.png> <./html.png>] [7] [8
 
 ]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 345.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 345.
- (sprawozdanie.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 345.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 345.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 376.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 376.
+
+(sprawozdanie.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 376.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 376.
 Package rerunfilecheck Info: File `sprawozdanie.out' has not changed.
-(rerunfilecheck)             Checksum: BCBE66B75BB4D645647CED8024150BA0;468.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 345.
+(rerunfilecheck)             Checksum: 1A275161AD6CE9CC2868FF03EA566BCB;577.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 376.
  ) 
 Here is how much of TeX's memory you used:
- 20479 strings out of 492482
- 370597 string characters out of 3130114
- 625556 words of memory out of 3000000
- 24354 multiletter control sequences out of 15000+200000
+ 20510 strings out of 492482
+ 370900 string characters out of 3130114
+ 625523 words of memory out of 3000000
+ 24379 multiletter control sequences out of 15000+200000
  57222 words of font info for 47 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  60i,11n,60p,866b,1160s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -963,9 +985,9 @@ es (x86)/MiKTeX/fonts/type1/public/lm/lmr12.pfb><C:/Program Files (x86)/MiKTeX/
 fonts/type1/public/lm/lmss12.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/pub
 lic/lm/lmss17.pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/lm/lmssbx10
 .pfb><C:/Program Files (x86)/MiKTeX/fonts/type1/public/lm/lmtt12.pfb>
-Output written on sprawozdanie.pdf (7 pages, 200295 bytes).
+Output written on sprawozdanie.pdf (8 pages, 271597 bytes).
 PDF statistics:
- 112 PDF objects out of 1000 (max. 8388607)
- 17 named destinations out of 1000 (max. 500000)
- 77 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 135 PDF objects out of 1000 (max. 8388607)
+ 23 named destinations out of 1000 (max. 500000)
+ 108 words of extra memory for PDF output out of 10000 (max. 10000000)
 
