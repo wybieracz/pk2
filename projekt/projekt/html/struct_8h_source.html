@@ -66,32 +66,36 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _CRT_SECURE_NO_WARNINGS</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="comment">/*@author Michal Pawlowski*/</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/*@file struct.h*/</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#define _CRT_SECURE_NO_WARNINGS</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#ifndef STRUCT</span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#define STRUCT</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="structelement.html">   16</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structelement.html">element</a> {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="structelement.html#aebe555f2f269a90570f4b769a3b4b0fe">   19</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structelement.html">element</a>* <a class="code" href="structelement.html#aebe555f2f269a90570f4b769a3b4b0fe">pNext</a>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="structelement.html#add146a67b8e1ee06bf1d2f7ce2f69c25">   21</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structelement.html">element</a>* <a class="code" href="structelement.html#add146a67b8e1ee06bf1d2f7ce2f69c25">subPage</a>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structelement.html#a54480102c096de10d20c25732547ea1d">   23</a></span>&#160;    <span class="keywordtype">char</span>* <a class="code" href="structelement.html#a54480102c096de10d20c25732547ea1d">title</a>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structelement.html#a5b30c57b80de0cf26179138db521416f">   25</a></span>&#160;    <span class="keywordtype">char</span>* <a class="code" href="structelement.html#a5b30c57b80de0cf26179138db521416f">link</a>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}<a class="code" href="structelement.html">element</a>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef STRUCT</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define STRUCT</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="structelement.html">   20</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structelement.html">element</a> {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="structelement.html#aebe555f2f269a90570f4b769a3b4b0fe">   23</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structelement.html">element</a>* <a class="code" href="structelement.html#aebe555f2f269a90570f4b769a3b4b0fe">pNext</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="structelement.html#add146a67b8e1ee06bf1d2f7ce2f69c25">   25</a></span>&#160;    <span class="keyword">struct </span><a class="code" href="structelement.html">element</a>* <a class="code" href="structelement.html#add146a67b8e1ee06bf1d2f7ce2f69c25">subPage</a>;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structelement.html#a54480102c096de10d20c25732547ea1d">   27</a></span>&#160;    <span class="keywordtype">char</span>* <a class="code" href="structelement.html#a54480102c096de10d20c25732547ea1d">title</a>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="structelement.html#a5b30c57b80de0cf26179138db521416f">   29</a></span>&#160;    <span class="keywordtype">char</span>* <a class="code" href="structelement.html#a5b30c57b80de0cf26179138db521416f">link</a>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}<a class="code" href="structelement.html">element</a>;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#endif</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="astructelement_html_aebe555f2f269a90570f4b769a3b4b0fe"><div class="ttname"><a href="structelement.html#aebe555f2f269a90570f4b769a3b4b0fe">element::pNext</a></div><div class="ttdeci">struct element * pNext</div><div class="ttdef"><b>Definition:</b> struct.h:19</div></div>
-<div class="ttc" id="astructelement_html_add146a67b8e1ee06bf1d2f7ce2f69c25"><div class="ttname"><a href="structelement.html#add146a67b8e1ee06bf1d2f7ce2f69c25">element::subPage</a></div><div class="ttdeci">struct element * subPage</div><div class="ttdef"><b>Definition:</b> struct.h:21</div></div>
-<div class="ttc" id="astructelement_html"><div class="ttname"><a href="structelement.html">element</a></div><div class="ttdef"><b>Definition:</b> struct.h:16</div></div>
-<div class="ttc" id="astructelement_html_a5b30c57b80de0cf26179138db521416f"><div class="ttname"><a href="structelement.html#a5b30c57b80de0cf26179138db521416f">element::link</a></div><div class="ttdeci">char * link</div><div class="ttdef"><b>Definition:</b> struct.h:25</div></div>
-<div class="ttc" id="astructelement_html_a54480102c096de10d20c25732547ea1d"><div class="ttname"><a href="structelement.html#a54480102c096de10d20c25732547ea1d">element::title</a></div><div class="ttdeci">char * title</div><div class="ttdef"><b>Definition:</b> struct.h:23</div></div>
+<div class="ttc" id="astructelement_html_aebe555f2f269a90570f4b769a3b4b0fe"><div class="ttname"><a href="structelement.html#aebe555f2f269a90570f4b769a3b4b0fe">element::pNext</a></div><div class="ttdeci">struct element * pNext</div><div class="ttdef"><b>Definition:</b> struct.h:23</div></div>
+<div class="ttc" id="astructelement_html_add146a67b8e1ee06bf1d2f7ce2f69c25"><div class="ttname"><a href="structelement.html#add146a67b8e1ee06bf1d2f7ce2f69c25">element::subPage</a></div><div class="ttdeci">struct element * subPage</div><div class="ttdef"><b>Definition:</b> struct.h:25</div></div>
+<div class="ttc" id="astructelement_html"><div class="ttname"><a href="structelement.html">element</a></div><div class="ttdef"><b>Definition:</b> struct.h:20</div></div>
+<div class="ttc" id="astructelement_html_a5b30c57b80de0cf26179138db521416f"><div class="ttname"><a href="structelement.html#a5b30c57b80de0cf26179138db521416f">element::link</a></div><div class="ttdeci">char * link</div><div class="ttdef"><b>Definition:</b> struct.h:29</div></div>
+<div class="ttc" id="astructelement_html_a54480102c096de10d20c25732547ea1d"><div class="ttname"><a href="structelement.html#a54480102c096de10d20c25732547ea1d">element::title</a></div><div class="ttdeci">char * title</div><div class="ttdef"><b>Definition:</b> struct.h:27</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

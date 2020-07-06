@@ -13,6 +13,16 @@
 #ifndef HEADER
 #define HEADER
 
+/** Funkcja kopiuje dane z tablicy parametrow do zmiennych
+@author Michal Pawlowski
+@date 2020-07-02
+@param argv tablica wczytanych parametrow
+@param param aktualnie kopiowany parametr
+@param count licznik kopiowanych parametrow
+@param i licznik petli
+*/
+void paramCpy(char* argv[], char** param, int* count, int* i);
+
 /** Funkcja sprawdza parametry wejsciowe oraz wczytuje z nich dane do zmiennych
 @author Michal Pawlowski
 @date 2020-07-02
@@ -49,13 +59,47 @@ void openFile(char** buffer, char* input);
 */
 bool linkcmp(char* parent, char* link, int bytes);
 
-/** Funkcja dodaje tytul do aktualnie przetwarzanego elementu
+/** Funkcja dodaje znaleziony tytul do przetwarzanego elementu
+@author Michal Pawlowski
+@date 2020-07-02
+@param [in,out] pHead wskaznik na element listy
+@param begin wskaxnik na poczatek tytulu
+@param end wskaznik na koniec tytulu
+*/
+void addFoundTitle(element** pHead, char* begin, char* end);
+
+/** Funkcja dodaje podpis o nieznanym tytule danej strony do przetwarzanego elementu
+@author Michal Pawlowski
+@date 2020-07-02
+@param [in,out] pHead wskaznik na element listy
+*/
+void addUnknownTitle(element** pHead);
+
+/** Funkcja znajduje i dodaje tytul do aktualnie przetwarzanego elementu
 @author Michal Pawlowski
 @date 2020-07-02
 @param [in,out] pHead wskaznik na element listy
 @param buffer wskaznik na bufor
 */
 void addTitle(element** pHead, char* buffer);
+
+/** Funkcja dodaje nazwe plku do aktualnie przetwarzanego elementu
+@author Michal Pawlowski
+@date 2020-07-02
+@param [in,out] pHead wskaznik na element listy
+@param begin wskaznik na poczatek nazwy
+@param end wskaxnik na koniec nazwy
+@see addElement() funkcja nadrzedna
+*/
+void addLinkToElement(element** pHead, char* begin, char* end);
+
+/** Funkcja alokuje nowy pusty element listy
+@author Michal Pawlowski
+@date 2020-07-02
+@param [in,out] pHead wskaznik na ktorym zostanie utworzony nowy element
+@see addElement() funkcja nadrzedna
+*/
+void addNullElement(element** pHead);
 
 /** Funkcja dodaje nowy element do listy
 @author Michal Pawlowski
@@ -85,7 +129,7 @@ void addSubPages(element** pHead, char* buffer, element* pParent);
 */
 void createFirst(element** pHead, char* input);
 
-/** Funkcja tworzy mape witryny oparta na liscie podwieszanej
+/** Funkcja tworzy mape witryny oparta o liste podwieszana
 @author Michal Pawlowski
 @date 2020-07-02
 @param [in,out] wskaznik na zaalokowana glowe listy

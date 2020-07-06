@@ -19,7 +19,7 @@
 */
 typedef struct element {
 
-	/** wskaznik na nastepny wezel w liscie (strone o tej samej wadze) */
+	/** wskaznik na nastepny wezel w liscie (strona o tej samej wadze) */
 	struct element* pNext;
 	/** wskaznik na nastepny wezel w liscie odchodzacej (podstrona) */
 	struct element* subPage;

@@ -14,24 +14,28 @@
 int main(int argc, char* argv[]) {
 	{
 
+		// stworzenie 3 wskaznikow na parametry startowe
+
 		char* input = NULL;
 		char* output = NULL;
 		char* ext = NULL;
 
+		// sprawdzenie i przekopiowanie parametrow startowych na utworzone powyzej wskazniki
+
 		if (!paramsCheck(argc, argv, &input, &output, &ext)) {
 
-			help();
+			help(); // wypisanie pomocy w razie blednego uruchomienia programu
 		}
 
 		else {
 
-			element* pHead = NULL;
+			element* pHead = NULL; // utworzenie wskaznika, glowy tworzonej struktury
 
-			createFirst(&pHead, input);
-			generete(&pHead, NULL);
-			printMap(pHead, 0);
-			saveMap(pHead, output, ext);
-			deleteList(&pHead);
+			createFirst(&pHead, input); // utworzenie pierwszego elementu struktury w oparciu o parametr poczatkowy input
+			generete(&pHead, NULL); // utworzenie reszty struktury, mapy witryny
+			printMap(pHead, 0); // wypisanie struktury na konsoli
+			saveMap(pHead, output, ext); // zapisanie mapy do pliku
+			deleteList(&pHead); // usuniecie struktury
 		}
 
 		_CrtDumpMemoryLeaks();

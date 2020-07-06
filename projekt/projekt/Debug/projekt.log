@@ -1,7 +1,4 @@
 ﻿  function.c
-C:\Users\wybieracz\source\repos\pk2\projekt\projekt\function.c(78,46): warning C4244: "funkcja": konwersja z "__int64" do "size_t", możliwa utrata danych
-  source.c
-C:\Users\wybieracz\source\repos\pk2\projekt\projekt\function.c(81,34): warning C4244: "funkcja": konwersja z "__int64" do "size_t", możliwa utrata danych
-  Generowanie kodu...
-C:\Users\wybieracz\source\repos\pk2\projekt\projekt\source.c(37,22): warning C4013: niezdefiniowany "_CrtDumpMemoryLeaks"; przy założeniu, że extern zwraca int
+C:\Users\wybieracz\source\repos\pk2\projekt\projekt\function.c(66,46): warning C4244: "funkcja": konwersja z "__int64" do "size_t", możliwa utrata danych
+C:\Users\wybieracz\source\repos\pk2\projekt\projekt\function.c(69,34): warning C4244: "funkcja": konwersja z "__int64" do "size_t", możliwa utrata danych
   projekt.vcxproj -> C:\Users\wybieracz\source\repos\pk2\projekt\Debug\projekt.exe
