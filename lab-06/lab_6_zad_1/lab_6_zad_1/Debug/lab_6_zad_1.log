@@ -1,0 +1,3 @@
+﻿  source.c
+C:\Users\wybieracz\source\repos\pk2\lab-06\lab_6_zad_1\lab_6_zad_1\source.c(120,22): warning C4013: niezdefiniowany "_CrtDumpMemoryLeaks"; przy założeniu, że extern zwraca int
+  lab_6_zad_1.vcxproj -> C:\Users\wybieracz\source\repos\pk2\lab-06\lab_6_zad_1\Debug\lab_6_zad_1.exe

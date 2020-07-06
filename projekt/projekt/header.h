@@ -1,4 +1,8 @@
 #pragma once
+
+/*@author Michal Pawlowski*/
+/*@file header.h*/
+
 #define _CRT_SECURE_NO_WARNINGS
 
 #include <stdio.h>

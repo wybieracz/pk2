@@ -1,4 +1,5 @@
 /*@author Michal Pawlowski*/
+/*@file source.c*/
 
 #define _CRT_SECURE_NO_WARNINGS
 #define _CRTDBG_MAP_ALLOC
