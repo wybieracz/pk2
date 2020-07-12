@@ -1,6 +1,7 @@
 1. mors w gif-ie (nazwa.html) + link do blume-inc.weebly.com na dole gifa
-2. plik audio na nazwa.html, hasło do bloga binarnie / dźwiękowo
+2. plik audio na nazwa.html, hasło (into) do bloga binarnie / dźwiękowo, link do bloga w formularzu
 3. blog na którym:
 -nick w szyfrze ROT-13 (szyfr cezara) / szesnastkowo + oko 13
 -haslo w kodzie strony / jakiś cytat szukaj głębiej
 -ulubiona piosenka w tle strony (ED#F#G #CHDE HA#CEA)
+4. wyszukaj plik key0702.dat

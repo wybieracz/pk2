@@ -13,7 +13,7 @@
 
 int main(int argc, char* argv[]) {
 	{
-
+		int kappa = 1;
 		// stworzenie 3 wskaznikow na parametry startowe
 
 		char* input = NULL;
